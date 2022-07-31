@@ -1,26 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
+import {Counter} from "./Counter/Counter";
+import {Container, Grid, Paper} from "@mui/material";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    const maxValue = 5
+    const minValue = 0
+    const [count, setCount] = useState(minValue)
+
+    const addCount = () => {
+        setCount(count + 1)
+    }
+    const resetCount = () => {
+        setCount(minValue)
+    }
+
+    return (
+        <Container fixed className={'App'} maxWidth={"sm"} style={{padding:'30px',}}>
+            <Paper elevation={5} className={'paper'}>
+               <Counter count={count} addCount={addCount} resetCount={resetCount}/>
+            </Paper>
+        </Container>
+
+    );
 }
 
 export default App;
+
+
