@@ -15,8 +15,8 @@ export const Counter = (props: CounterTypeProps) => {
         <div>
             <Grid container justifyContent={"center"}><Display count={props.count}/></Grid>
             <Grid container style={{padding:'80px'}} justifyContent={"space-around"}>
-              <MyButton callback={props.addCount} nameButton={'add'}></MyButton>
-                <MyButton callback={props.resetCount} nameButton={'reset'}></MyButton>
+              <MyButton value={false} callback={props.addCount} nameButton={'add'}></MyButton>
+                <MyButton value={false} callback={props.resetCount} nameButton={'reset'}></MyButton>
 
             </Grid>
 
