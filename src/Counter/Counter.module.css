@@ -1,2 +1,17 @@
 
+.btnGroup {
+    margin-top: 20px;
+    border:solid 2px deepskyblue;
+    border-radius: 30px;
+}
+.display{
+    display: flex;
+    justify-content: center;
+    height: 110px;
+    align-items: center;
+    border:solid 2px deepskyblue;
+    border-radius: 30px;
+    width: 80%;
+    background-color: darkblue;
 
+}
