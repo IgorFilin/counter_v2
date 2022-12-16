@@ -25,7 +25,8 @@ export const Counter = (props: CounterTypeProps) => {
             <Grid style={{padding: "45px"}} container direction={"column"} alignItems={"center"}
                   justifyContent={"space-around"}>
                 <Grid className={s.display} item>
-                    {!props.settingsMode ? <Display
+                    {!props.settingsMode ?
+                        <Display
                         lastValue={lastValue}
                         count={props.count}/>
                         :
@@ -38,10 +39,12 @@ export const Counter = (props: CounterTypeProps) => {
                         />}
                 </Grid>
                 <Grid container className={s.btnGroup} justifyContent={"space-around"} style={{padding: '50px'}}>
-                    {!props.settingsMode && <Grid item>
+                    {!props.settingsMode &&
+                        <Grid item>
                         <Button disabled={lastValue} variant={"contained"} onClick={props.addCount}>Add</Button>
                     </Grid>}
-                    {!props.settingsMode &&  <Grid item>
+                    {!props.settingsMode &&
+                        <Grid item>
                         <Button disabled={firstValue} variant={"contained"} onClick={props.resetCount}>Reset</Button>
                     </Grid>}
                     <Grid item>
